@@ -301,4 +301,5 @@
             contents.forEach(content => content.classList.remove('active-tab'));
             
             // Remove active color styles from buttons
-                                                                                                               
+     const buttons = document.querySelectorAll('.nav-btn');buttons.forEach(btn => btn.classList.remove('active'));// Show current target tabconst targetTab = document.getElementById(tabId);if (targetTab) {targetTab.classList.add('active-tab');}// Highlight clicked buttonconst clickedBtn = event.currentTarget;if(clickedBtn && clickedBtn.classList.contains('nav-btn')) {clickedBtn.classList.add('active');}}
+            
