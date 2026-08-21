@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>United Students Foundation USF</title>
     <style>
-        /* Base page and layout styles */
         * { box-sizing: border-box; }
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
@@ -58,7 +57,6 @@
         .nav-btn.active { background-color: #ffffff; color: #2c5282; border: 1px solid #ced4da; font-weight: bold; }
         .main-card { background: #ffffff; border: 1px solid #ced4da; border-radius: 6px; padding: 40px; }
         .tab-content { display: none; flex-direction: column; gap: 20px; line-height: 1.6; }
-        .tab-content.active-tab { display: flex; }
         .card-top { display: flex; gap: 40px; align-items: flex-start; }
         .logo-box { flex: 1; max-width: 320px; background: #ffffff; padding: 15px; border: 1px solid #e2e8f0; text-align: center; border-radius: 4px; }
         .logo-img { max-width: 100%; height: auto; }
@@ -73,7 +71,7 @@
         .bold-lead { font-weight: bold; color: #2d3748; }
         .section-title { font-size: 1.25rem; color: #2d3748; margin-top: 10px; margin-bottom: 5px; }
         .position-item { font-size: 1.05rem; color: #4a5568; margin: 6px 0; }
-        .become-member-link { margin-top: 20px; font-style: italic; font-size: 1.2rem; color: #2c5282; text-decoration: none; font-weight: 500; display: inline-block; }
+        .become-member-link { margin-top: 20px; font-style: italic; font-size: 1.2rem; color: #2c5282; text-decoration: none; font-weight: 500; display: inline-block; cursor: pointer; }
         @media (max-width: 768px) {
             .content-grid { grid-template-columns: 1fr; }
             .card-top { flex-direction: column; }
@@ -89,14 +87,13 @@
         </div>
         <div class="content-grid">
             <nav class="sidebar">
-                <button class="nav-btn active" onclick="openTab(event, 'home')">Home page</button>
-                <button class="nav-btn" onclick="openTab(event, 'more')">More</button>
-                <button class="nav-btn" onclick="openTab(event, 'contact')">Contact page</button>
-                <button class="nav-btn" onclick="openTab(event, 'preamble')">Preamble</button>
+                <button id="btn-home" class="nav-btn active" onclick="openTab('home', this)">Home page</button>
+                <button id="btn-more" class="nav-btn" onclick="openTab('more', this)">More</button>
+                <button id="btn-contact" class="nav-btn" onclick="openTab('contact', this)">Contact page</button>
+                <button id="btn-preamble" class="nav-btn" onclick="openTab('preamble', this)">Preamble</button>
             </nav>
             <main class="main-card">
-                <!-- HOME PAGE TAB -->
-                <div id="home" class="tab-content active-tab">
+                <div id="home" class="tab-content" style="display: flex;">
                     <div class="card-top">
                         <div class="logo-box">
                             <img class="logo-img" src="images/logo.png" onerror="this.src='https://placehold.co'" alt="Logo">
@@ -112,10 +109,10 @@
                         <li>7 Jai</li><li>8 Siddhant</li><li>9 Spandhan</li><li>10 Aahana</li><li>11 Aartick</li><li>12 Kartikay</li>
                         <li>13 Pratyush</li><li>14 Chavi</li><li>15 Sirat</li><li>16 Divya</li><li>17 Miyer</li><li>18 Kulmeet</li>
                     </ul>
-                    <a href="#" onclick="openTab(event, 'contact')" class="become-member-link">Become a member</a>
+                    <div>
+                        <span onclick="openTab('contact', document.getElementById('btn-contact'))" class="become-member-link">Become a member</span>
+                    </div>
                 </div>
-
-                <!-- MORE TAB -->
                 <div id="more" class="tab-content">
                     <h2>Major Positions</h2>
                     <div class="section-title">Boys ⬇️</div>
@@ -129,45 +126,35 @@
                         <li>1 Advik</li><li>2 Avuykt</li><li>3 Pratyush</li><li>4 Saatvik</li><li>5 Spandhan</li><li>6 Charvik</li>
                     </ul>
                 </div>
-
-                <!-- CONTACT TAB -->
                 <div id="contact" class="tab-content">
                     <h2>Contact Page</h2>
                     <p>Connect with our team or sign up here.</p>
                 </div>
-
-                <!-- PREAMBLE TAB -->
                 <div id="preamble" class="tab-content">
                     <h2>Preamble</h2>
                     <p>We, the members of the United Students Foundation, determined to promote unity, mutual support, and academic success within our school, hereby establish these Charter Rules.</p>
-
                     <h3>Article I: Purposes & Principles</h3>
                     <ul class="charter-list">
                         <li><span class="bold-lead">Sovereign Equality:</span> Every student member has an equal voice, regardless of grade level or background.</li>
                         <li><span class="bold-lead">Peaceful Coexistence:</span> Disagreements must be settled through calm discussion and mediation, never through conflict or exclusion.</li>
                         <li><span class="bold-lead">Universal Respect:</span> Members shall honor the rights and dignity of every classmate.</li>
                     </ul>
-
                     <h3>Article II: Membership & Delegations</h3>
                     <ul class="charter-list">
                         <li><span class="bold-lead">Open Membership:</span> Any student in good standing who agrees to this Charter may join as a Student Delegate.</li>
                         <li><span class="bold-lead">Active Representation:</span> Delegates are expected to attend General Assembly meetings and represent their classes with integrity.</li>
                     </ul>
-
                     <h3>Article III: The Student Security Council</h3>
                     <ul class="charter-list">
                         <li><span class="bold-lead">Leadership Role:</span> Elected student officers (President, Vice-President, Secretary) serve as the Security Council to maintain order and guide projects.</li>
                         <li><span class="bold-lead">Resolutions:</span> Decisions regarding major events or project funds require a majority vote by the council and approval from the General Assembly.</li>
                     </ul>
-
                     <h3>Article IV: Collective Action & Goodwill</h3>
                     <ul class="charter-list">
                         <li><span class="bold-lead">Humanitarian Support:</span> Members will organize student-led study groups and support initiatives to help classmates in need.</li>
                         <li><span class="bold-lead">Sanctions:</span> Delegates who repeatedly break school rules or cause harm to the group will face temporary suspension from foundation activities.</li>
                     </ul>
-
                     <h3>Article V: The General Assembly</h3>
                     <ul class="charter-list">
                         <li><span class="bold-lead">Annual Summit:</span> A full assembly of all Student Delegates shall convene at least once per term to vote on major foundation initiatives.</li>
-                        
-Voting Rights: Each Delegate holds one vote. Decisions shall be passed by a simple majority, ensuring every member contributes to the foundation's direction.Article VI: Academic & Cultural SecretariatProject Committees: Dedicated committees (such as Event Planning, Tutoring, and Community Outreach) shall manage specific programs under the guidance of appointed Committee Chairs.Cultural Exchange: The Secretariat shall promote events that celebrate student diversity, foster creativity, and share different cultures within the school.Article VII: Diplomatic Immunity & Safe SpacesSafe Communication: The foundation provides a protected environment where all delegates can share structural feedback and peer concerns safely without fear of judgment.function openTab(evt, tabId) {if (evt) evt.preventDefault();document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active-tab'));document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));document.getElementById(tabId).classList.add('active-tab');if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');}
+                        Voting Rights: Each Delegate holds one vote. Decisions shall be passed by a simple majority, ensuring every member contributes to the foundation's direction.Article VI: Academic & Cultural SecretariatProject Committees: Dedicated committees (such as Event Planning, Tutoring, and Community Outreach) shall manage specific programs under the guidance of appointed Committee Chairs.Cultural Exchange: The Secretariat shall promote events that celebrate student diversity, foster creativity, and share different cultures within the school.Article VII: Diplomatic Immunity & Safe SpacesSafe Communication: The foundation provides a protected environment where all delegates can share structural feedback and peer concerns safely without fear of judgment.function openTab(tabId, element) {var contents = document.getElementsByClassName('tab-content');for (var i = 0; i < contents.length; i++) {contents[i].style.display = 'none';}var buttons = document.getElementsByClassName('nav-btn');for (var j = 0; j < buttons.length; j++) {buttons[j].className = 'nav-btn';}var targetTab = document.getElementById(tabId);if (targetTab) {targetTab.style.display = 'flex';}if (element) {element.className = 'nav-btn active';}}
