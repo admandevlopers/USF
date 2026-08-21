@@ -1,107 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>United Students Foundation USF</title>
-    <style>
-        * { box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            margin: 0; 
-            padding: 20px; 
-            background: linear-gradient(180deg, #b0c4de 0%, #e6f2ff 100%); 
-            color: #2c3e50; 
-            min-height: 100vh;
-        }
-        .site-wrapper {
-            max-width: 1100px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        header {
-            background-color: #ffffff;
-            padding: 15px 25px;
-            border: 1px solid #ced4da;
-            border-radius: 6px;
-            margin-bottom: 15px;
-        }
-        header h1 { margin: 0; font-size: 1.8rem; color: #2c5282; font-weight: 500; }
-        .banner-container {
-            width: 100%;
-            height: 320px;
-            border-radius: 6px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            border: 1px solid #ced4da;
-        }
-        .banner-img { width: 100%; height: 100%; object-fit: cover; }
-        .content-grid { display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: start; }
-        .sidebar { display: flex; flex-direction: column; gap: 10px; }
-        .nav-btn {
-            display: block;
-            width: 100%;
-            padding: 12px 15px;
-            text-align: left;
-            border-radius: 6px;
-            border: 1px solid #3182ce;
-            background-color: #4a90e2;
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-        .nav-btn:hover { background-color: #357abd; }
-        .nav-btn.active { background-color: #ffffff; color: #2c5282; border: 1px solid #ced4da; font-weight: bold; }
-        .main-card { background: #ffffff; border: 1px solid #ced4da; border-radius: 6px; padding: 40px; display: flex; flex-direction: column; gap: 25px; }
-        .card-top { display: flex; gap: 40px; align-items: flex-start; }
-        .logo-box { flex: 1; max-width: 320px; background: #ffffff; padding: 15px; border: 1px solid #e2e8f0; text-align: center; border-radius: 4px; }
-        .logo-img { max-width: 100%; height: auto; }
-        .info-box { flex: 1; }
-        .info-box h2 { margin-top: 0; font-size: 1.4rem; color: #2c5282; }
-        .member-list { list-style-type: none; padding: 0; margin: 0; }
-        .member-list li { font-size: 1.1rem; padding: 6px 0; color: #2d3748; }
-        @media (max-width: 768px) {
-            .content-grid { grid-template-columns: 1fr; }
-            .card-top { flex-direction: column; }
-            .logo-box { max-width: 100%; }
-        }
+<html class="no-js" lang="en">
+  <head>
+    <title>
+      USF
+    </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="USF United students foundation" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="generator" content="FreeSite Website Builder V2.02.10989" />
+    <meta property="og:title" content="USF" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://usfindia.simdif.com/img/sd_freesite_logo.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://usfindia.simdif.com/" />
+    <meta property="og:site_name" content="USF" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <script type="application/ld+json">
+      {
+                    &#34;@context&#34;: &#34;https://schema.org&#34;,
+                    &#34;@type&#34;: &#34;WebSite&#34;,
+                    &#34;name&#34;: &#34;USF&#34;,
+                    &#34;url&#34;: &#34;https://usfindia.simdif.com/&#34;
+                }
+    </script>
+    <link rel="canonical" href="https://usfindia.simdif.com/" />
+    <link rel="alternate" href="https://usfindia.simdif.com/" hreflang="en" />
+    <link rel="shortcut icon" href="img/preset/favicon_publish/favicon_000.ico?no_cache=1552291834" />
+    <!-- Javascript libraly -->
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" media="print" onload="this.media=&#39;all&#39;" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js">
+    </script>
+    <style type="text/css">
+      @font-face {font-family:&#39;Nunito Sans&#39;;font-style:normal;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/cyrillic/opsz/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:normal;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/latin/opsz/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:normal;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/latin-ext/opsz/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:normal;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/vietnamese/opsz/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:normal;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/cyrillic-ext/opsz/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:italic;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/cyrillic-ext/opsz/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:italic;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/latin/opsz/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:italic;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/cyrillic/opsz/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:italic;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/latin-ext/opsz/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:&#39;Nunito Sans&#39;;font-style:italic;font-weight:200 900;src:url(/cf-fonts/v/nunito-sans/5.2.7/vietnamese/opsz/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}
     </style>
-</head>
-<body>
-    <div class="site-wrapper">
-        <header><h1>United Students Foundation USF</h1></header>
-        <div class="banner-container">
-            <img class="banner-img" src="images/banner.jpg" onerror="this.src='https://unsplash.com'" alt="Banner">
-        </div>
-        <div class="content-grid">
-            <nav class="sidebar">
-                <a href="#" class="nav-btn active">Home page</a>
-                <a href="https://github.io" class="nav-btn">More</a>
-                <a href="https://admandevlopers.github.io/preamble/" class="nav-btn">Preamble</a>
-            </nav>
-            <main class="main-card">
-                <div class="card-top">
-                    <div class="logo-box">
-                        <img class="logo-img" src="images/logo.png" onerror="this.src='https://placehold.co'" alt="Logo">
-                    </div>
-                    <div class="info-box">
-                        <h2>Members are ⬇️</h2>
-                        <ul class="member-list">
-                            <li>1 Advik</li><li>2 Avuykt</li><li>3 Saatvik</li><li>4 Charvik</li><li>5 Virat</li><li>6 Shivansh</li>
-                        </ul>
-                    </div>
-                </div>
-                <ul class="member-list">
-                    <li>7 Jai</li><li>8 Siddhant</li><li>9 Spandhan</li><li>10 Aahana</li><li>11 Aartick</li><li>12 Kartikay</li>
-                    <li>13 Pratyush</li><li>14 Chavi</li><li>15 Sirat</li><li>16 Divya</li><li>17 Miyer</li><li>18 Kulmeet</li>
-                </ul>
-            </main>
-        </div>
-    </div>
-</body>
-                </html>
-                    
+    <style type="text/css">
+      @font-face {font-family:&#39;Marcellus&#39;;font-style:normal;font-weight:400;src:url(/cf-fonts/s/marcellus/5.2.8/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:&#39;Marcellus&#39;;font-style:normal;font-weight:400;src:url(/cf-fonts/s/marcellus/5.2.8/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}
+    </style>
+    <style type="text/css">
+      @font-face {font-family:&#39;Quattrocento&#39;;font-style:normal;font-weight:400;src:url(/cf-fonts/s/quattrocento/5.2.8/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:&#39;Quattrocento&#39;;font-style:normal;font-weight:400;src:url(/cf-fonts/s/quattrocento/5.2.8/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:&#39;Quattrocento&#39;;font-style:normal;font-weight:700;src:url(/cf-fonts/s/quattrocento/5.2.8/latin-ext/700/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:&#39;Quattrocento&#39;;font-style:normal;font-weight:700;src:url(/cf-fonts/s/quattrocento/5.2.8/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}
+    </style>
+    <script defer="" src="js/sd_js.js?fe37ea18d05d0825b38af97f3b3f4e95">
+    </script>
+    <link rel="stylesheet" href="css/sd_style.css?8a3ad6e004c16d8593d0415ecbd443c6" media="print" onload="this.media=&#39;all&#39;" />
+    <style>
+      html,body{ box-sizing:border-box; height:100%; -webkit-overflow-scrolling:touch !important; -ms-touch-action:manipulation; touch-action:manipulation; overscroll-behavior:none;}.sd-column-nav-fixed::-webkit-scrollbar{ display:none;}*, *:before, *:after{ box-sizing:inherit;}::-moz-selection{ background:#b3d4fc; text-shadow:none;}::selection{ background:#b3d4fc; text-shadow:none;}html.overflow-hidden,body.overflow-hidden{ overflow:hidden;}img{ display:block; width:100%; height:auto;}a{ text-decoration:none; outline:none;}p{ margin:0 ;}body{ margin:0px; height:100%; -webkit-touch-callout:none !important;}.noselect{ -webkit-user-select:none !important; -khtml-user-select:none !important; -moz-user-select:none !important; -ms-user-select:none !important; user-select:none !important;}.noscroll{ -webkit-overflow-scrolling:touch !important; -ms-touch-action:manipulation !important; touch-action:manipulation !important; overflow:hidden !important; height:100% !important;}.fixednoscroll{ position:fixed; width:100%;}.browserupgrade{ margin:0.2em 0; background:#ccc; color:#000; padding:0.2em 0;}html{ font-size:1em; font-family:&#39;Nunito Sans&#39;, &#39;Roboto&#39;, sans-serif; line-height:1.2;}h1, h2, h3, h4, h5, h6{ margin-top:0; margin-bottom:0;}h1{ font-size:1.5em; margin-bottom:0.6em;}h2{ font-size:1.2em; margin-bottom:0.5em;}.note-editable h3{ margin-bottom:0.5em;}input{ vertical-align:middle;}textarea{ height:80px !important;}#sd-main-wrap input[type=&#34;text&#34;],#sd-main-wrap input[type=&#34;number&#34;],#sd-main-wrap input[type=&#34;email&#34;],#sd-main-wrap input[type=&#34;url&#34;],#sd-main-wrap input[type=&#34;tel&#34;],#sd-main-wrap input[type=&#34;password&#34;],#sd-main-wrap select,#sd-main-wrap textarea,.sd-block-ecom-code input[type=&#34;text&#34;],.sd-block-ecom-code select{ background-color:rgba(255, 255, 255, 1.0); box-shadow:0 1px 3px rgba(0,0,0,0.12), 1px 1px 2px rgba(0,0,0,0.24); width:100%; padding:5px 10px; border:1px solid #d8d8d8; border-radius:5px; margin-bottom:15px; color:rgba(0, 0, 0, 0.60); box-sizing:border-box;}.sd-shadow-0{ box-shadow:none !important;}.sd-shadow-1{ box-shadow:0 1px 2px rgba(0,0,0,0.23) !important;}.sd-shadow-2{ box-shadow:0 2px 6px rgba(0,0,0,0.23) !important;}.sd-shadow-3{ box-shadow:0 2px 6px rgba(0,0,0,0.33) !important;}.sd-shadow-4{ box-shadow:0 3px 9px rgba(0,0,0,0.23) !important;}.clear{ clear:both;}.hidden{ display:none !important;}.visuallyhidden{ border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}.visuallyhidden.focusable:selected,.visuallyhidden.focusable:focus{ clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto;}.invisible{ visibility:hidden;}.clearfix:before,.clearfix:after{ content:&#34; &#34;; display:table;}.clearfix:after{ clear:both;}.button-active,.button-active2,.button-active3,.button-active4,.button-about-pro,.button-text-active{ cursor:pointer;}.button-active{ opacity:0.6 !important; transform:scale(0.95);}.button-active2{ opacity:0.7 !important; transform:scale(0.95);}.button-active3{ opacity:0.8 !important; transform:scale(0.97);}.button-active4{ opacity:0.8 !important; transform:scale(0.98);}.button-active5{ opacity:0.7 !important; transform:scale(0.85);}.button-about-pro{ transform:scale(0.97); left:-3px;}.button-text-active{ opacity:0.6 !important;}.button-list-active{ background:rgba(162, 190, 244, 0.3);}.sd-mobnav-btn-active{ transform:scale(0.92) !important; background:rgba(0, 0, 0, 1);}.sd-mode-edit .sd-block-readmore-div.single:active,.sd-mode-edit .sd-block-readmore-items:active,.sd-mode-preview .sd-block-readmore-div.single:active,.sd-mode-preview .sd-block-readmore-items:active,.sd-publish-site .sd-block-readmore-div.single:active,.sd-publish-site .sd-block-readmore-items:active,.sd-contact-btn:active,.sd-block-cfa:active,.sd-mobnav-btn:active,.sd-ct-submit:active{ transform:scale(0.97) !important;}.sd-tab-item:active,.button-active-big{ transform:scale(1.05) !important;}.sd-mobnav-btn:active{ background:rgba(0, 0, 0, 1);}.sd-subscription-goto-store{ margin-bottom:10px;}.sd-subscription-logo-div{ display:inline-block; margin-bottom:14px;}.sd-subscription-icon{ width:145px; background-color:#cdf3fc; border-radius:4px; text-shadow:2px 1px #21333e; box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); overflow:hidden; border:1px solid rgba(169, 169, 169, 0.73);}.sd-subscription-icon:hover,.sd-subscription-logo-popup:hover{ opacity:0.5;}.sd-subscription-detail{ margin-bottom:17px;}.sd-subscription-reason{ margin-bottom:10px; font-weight:bold;}.sd-subscription-logo-popup{ width:145px; margin:auto; background-color:#cdf3fc; border-radius:4px; text-shadow:2px 1px #21333e; box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); overflow:hidden; border:1px solid rgba(169, 169, 169, 0.73);}.sd-block.sd-block-audio{ text-align:center !important; max-width:700px; margin:0 auto; margin-bottom:2em;}#sd-wrapper{ position:relative; overflow:hidden;}.sd-bg-wrapper:before{ content:&#39;&#39;; display:block; position:fixed; top:300px; left:0; width:100%; height:100%; z-index:2;}.sd-bg-wrapper.sd-header-image,.sd-bg-wrapper.sd-header-image:after{ background-repeat:no-repeat; background-attachment:scroll; background-size:1920px 642px; background-position:top center; position:fixed; left:0; width:100%; height:100%;}.sd-bg-wrapper.sd-header-image:after{ content:&#39;&#39;; -webkit-filter:blur(5px); -moz-filter:blur(5px); -o-filter:blur(5px); -ms-filter:blur(5px); filter:blur(5px); z-index:1; width:105%; left:-2.5%; top:-10px;}.sd-mode-edit .sd-bg-wrapper.sd-header-image:after{ top:35px;}.sd-mode-edit.sd-mode-edit-has-popup #sd-editor-top-panel{ height:50px; min-height:50px;}.sd-mode-edit.sd-mode-edit-has-popup .sd-bg-wrapper.sd-header-image:after{ top:42px;}.sd-bg-wrapper.sd-header-image.sd-header-image-blur-hidden:after{ display:none;}.sd-bg-wrapper-texture{ position:fixed; top:0; left:0; width:100%; height:100%; background-repeat:repeat;}.sd-container{ width:99%; margin:0 auto;}#sd-main-wrap{ position:relative; top:9px; margin-top:6px;}.sd-top-panel-show #sd-main-wrap{ margin-top:12px;}#sd-overlay{ position:fixed; display:none; width:100%; height:100%; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5); z-index:2; cursor:pointer;}#sd-main-wrap-blur{ width:100%; height:100%; position:absolute;} #sd-main{ position:relative; margin-top:-10px;}.sd-home-page #sd-main{ margin-top:0px;}.sd-home-page .sd-mobnav-btn{ bottom:-20px !important;}#sd-column-nav{ width:80%; height:100%; left:-79.5%; position:absolute; z-index:3;}.sd-menu-show #sd-column-nav{ left:10.5%; animation-name:mobilenavopen; animation-duration:0.5s;}.sd-menu-close #sd-column-nav{ left: -79.5%; animation-name:mobilenavclose; animation-duration:0.5s;}#sd-column-page{ left:0%; width:99%; padding:0.8em; position:relative; margin:0 auto 10px; min-height:350px; z-index:1;}.sd-menu-show #sd-column-page{ left:90%; animation-name:mobilepageopen; animation-duration:0.5s;}.sd-menu-close #sd-column-page{ left:0%; animation-name:mobilepageclose; animation-duration:0.5s;}.sd-site-expired{ background-color:#8c0000e6;}#sd-site-title span,.sd-page-title span,.sd-block-title span{ display:block;}.sd-strip-blur{ -webkit-backdrop-filter:blur(5px); -moz-backdrop-filter:blur(5px); -o-backdrop-filter:blur(5px); -ms-backdrop-filter:blur(5px); backdrop-filter:blur(5px);}#sd-footer.sd-footer-gradient-none::before{ background:none !important;}@keyframes mobilenavclose{ from{left:10.5%;} to{left:-79.5%;}}@keyframes mobilepageclose{ from{left:90%;} to{left:0%;}}@keyframes mobilefooterclose{ from{left:90.5%;} to{left:0%;}}@keyframes mobilenavopen{ from{left:-79.5%;} to{left:10.5%;}}@keyframes mobilepageopen{ from{left:0%;} to{left:90%;}}@keyframes mobilefooteropen{ from{left:0%;} to{left:90.5%;}}.sd-main-nav{ width:100%; height:100%; padding-top:1.5em; right:-0.05rem; position:relative;}.sd-tab{ list-style:none; margin-top:0em; padding:0; width:100%; height:fit-content;}.sd-tab &gt; li &gt; a{ display:block; position:relative; text-decoration:none !important; padding:0.7em 1em; min-height:40px; word-wrap:break-word;}.sd-tab &gt; .sd-tab-item-active .sd-editor-edit-tab{ display:block;}.sd-tab &gt; .sd-tab-item-active &gt; a{ margin-right:0; position:relative; z-index:1;}.sd-tab &gt; li.sd-tab-item-space{ min-height:30px; width:99%;}.sd-tab &gt; li.sd-tab-item-donate img[src$=&#34;pixel.gif&#34;]{ width:auto; margin:auto; cursor:pointer; display:none;}.sd-tab-item-donate input[type=&#34;image&#34;]{ max-width:100%;}.sd-block,.sd-block.sd-block-map{ margin-bottom:1.8em;}.sd-block.sd-block-readmore-div{ margin-bottom:2.1em; white-space:break-word;}.sd-block-readmore-items{ float:left; width:50%; position:relative;}.sd-readmore-icon{ color:#325881; font-size:30px; background-color:rgba(203, 208, 213, 0.38); border-radius:36px; padding-top:2px; cursor:pointer; width:43px; text-align:center; position:absolute; right:18px; bottom:42px; display:inline-block;}.sd-block-readmore .sd-image-desc{ display:none;}.readmore-items-left{ padding-right:8px;}.readmore-items-left{ padding-right:8px;}.sd-block-img-readmore.sd-icon-image,.sd-block-img-readmore-many.sd-icon-image{ display:block; color:rgba(186, 183, 183, 0.5); font-size:60px; border-radius:36px; cursor:pointer; width:43px; position:absolute; left:0px; top:75px; display:block; text-align:center; width:100%;}.sd-block-img-readmore.sd-icon-image{ top:0px;}.readmore-items-right{ padding-left:10px;}.sd-block-readmore-items .sd-block-readmore{ height:200px;}#sd-wrap-content .sd-block-readmore-items .sd-block-readmore .sd-page-title{ font-size:100%;}.sd-block-readmore-items .sd-img-3-col-thumb .sd-img-ver{ width:70%;}.sd-block-readmore-div .sd-contact-block-type{ display:none !important;}.sd-block.sd-block-text{ margin-bottom:2.1em !important;}#sd-wrap-content{ position:relative;}.sd-page-title{ margin-bottom:0px; padding:0.7em 0.65em; margin-top:-3px;}#sd-wrap-content .sd-image-desc,.sd-block-text-desc h2, #sd-wrap-content .sd-page-title,#chatbox .com_block_title{ word-break:break-word;}#sd-wrap-content .sd-page-title *,#sd-wrap-content .sd-block-title,#sd-wrap-content .sd-block-title *{ word-break:break-word;}.sd-block-image.sd-img-align-center.sd-img-full{ margin-bottom:0.5em;}.sd-block-text-desc{ word-wrap:break-word;}.sd-block-text-desc p:last-child{ margin-bottom:0 !important;}.sd-block-text-desc h3{ margin-bottom:8px;}.sd-block-text-desc b a,.sd-footer-content b a{ font-weight:bold !important;}.sd-block-image.sd-img-align-right.sd-img-big img,.sd-block-image.sd-img-align-right.sd-img-small img,.sd-block-image.sd-img-align-left.sd-img-big img,.sd-block-image.sd-img-align-left.sd-img-small img,.sd-block-image.sd-img-align-right.sd-img-big .sd-block-fake-img,.sd-block-image.sd-img-align-right.sd-img-small .sd-block-fake-img,.sd-block-image.sd-img-align-left.sd-img-big .sd-block-fake-img,.sd-block-image.sd-img-align-left.sd-img-small .sd-block-fake-img,.sd-column-page-content img,.sd-column-page-content .sd-block-image.sd-img-align-left.sd-img-small img,.sd-column-page-content .sd-block-image.sd-img-align-right.sd-img-small img.sd-column-page-content .sd-img-3-col-div img{ margin-top:0.5em; margin-bottom:1em;}.sd-img-3-col-thumb, .sd-block-gallery-ecom .sd-img-3-col-thumb, .sd-block-readmore .sd-block-gallery-ecom .sd-img-3-col-thumb{ margin-bottom:6px;}.sd-block-readmore .sd-block-image.sd-img-align-left.sd-img-big img,.sd-block-readmore .sd-block-image.sd-img-align-right.sd-img-big img,.sd-block-readmore .sd-block-image.sd-img-align-right.sd-img-small img,.sd-block-readmore .sd-block-image.sd-img-align-left.sd-img-big .sd-block-fake-img,.sd-block-readmore .sd-block-image.sd-img-align-right.sd-img-big .sd-block-fake-img,.sd-block-readmore .sd-block-image.sd-img-align-right.sd-img-small .sd-block-fake-img{ margin-top:0.15em !important; margin-bottom:0.5em !important;}.sd-block-readmore .sd-block-image.sd-img-align-left.sd-img-small img,.sd-block-readmore .sd-block-image.sd-img-align-left.sd-img-small .sd-block-fake-img,.sd-block-readmore .sd-block-image.sd-img-align-right.sd-img-small img,.sd-block-readmore .sd-block-image.sd-img-align-right.sd-img-small .sd-block-fake-img{ margin-top:0.15em !
