@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Students Foundation USF</title>
+    <style>
+        /* Base page styles mimicking the SimDif background theme */
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: linear-gradient(180deg, #b0c4de 0%, #e6f2ff 100%); 
+            color: #2c3e50; 
+            min-height: 100vh;
+        }
+
+        /* Main layout wrapping box */
+        .site-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Clean Header style */
+        header {
+            background-color: #ffffff;
+            padding: 15px 25px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #2c5282;
+        }
+
+        /* Hero Banner Image section */
+        .banner-container {
+            width: 100%;
+            height: 320px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ced4da;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Two-column structural grid for Sidebar and Main Content */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        /* Left Side Navigation Buttons */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .nav-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            border: 1px solid #3182ce;
+        }
+        .nav-btn.active {
+            background-color: #ffffff;
+            color: #2c5282;
+            border: 1px solid #ced4da;
+            font-weight: bold;
+        }
+        .nav-btn.blue-btn {
+            background-color: #4a90e2;
+            color: white;
+        }
+        .nav-btn.blue-btn:hover {
+            background-color: #357abd;
+        }
+
+        /* Main content panel card */
+        .main-card {
+            background: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Top block containing logo layout and initial members */
+        .card-top {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* Left column inside main card: Logo Image container */
+        .logo-box {
+            flex: 1;
+            max-width: 320px;
+            background: #ffffff;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            border-radius: 4px;
+        }
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Right column inside main card: Members text section */
+        .info-box {
+            flex: 1;
+        }
+        .info-box h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #4a5568;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .member-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .member-list li {
+            font-size: 1.1rem;
+            padding: 6px 0;
+            color: #2d3748;
+        }
+
+        /* Style for the extended bottom list items */
+        .extended-list {
+            margin-top: 5px;
+        }
+
+        /* Footer Link styling matching your "Become a member" text */
+        .become-member-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #2c5282;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .become-member-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adaptation for smaller mobile screens */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .card-top {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .logo-box {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-wrapper">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>United Students Foundation USF</h1>
+        </header>
+
+        <!-- Beach View Banner -->
+        <div class="banner-container">
+            <img class="banner-img" src="images/banner.jpg" onerror="this.src='https://unsplash.com'" alt="USF Beach Banner">
+        </div>
+
+        <!-- Lower Section Content Grid -->
+        <div class="content-grid">
+            
+            <!-- Left Side Navbar -->
+            <nav class="sidebar">
+                <a href="#" class="nav-btn active">Home page</a>
+                <a href="#" class="nav-btn blue-btn">More</a>
+                <a href="#" class="nav-btn blue-btn">Contact page</a>
+                <a href="#" class="nav-btn blue-btn">Preamble</a>
+                <a href="#" class="nav-btn blue-btn">USF code language</a>
+            </nav>
+
+            <!-- Main Dynamic Text Container -->
+            <main class="main-card">
+                
+                <div class="card-top">
+                    <!-- Logo Layout Frame -->
+                    <div class="logo-box">
+                        <img class="logo-img" src="images/logo.png" onerror="this.src='https://placehold.co\nBuilding+Bridges'" alt="United Students Foundation Logo">
+                    </div>
+
+                    <!-- Members Summary List Text Area (1 to 6) -->
+                    <div class="info-box">
+                        <h2>Members are ⬇️</h2>
+                        <ul class="member-list">
+                            <li>1 Advik</li>
+                            <li>2 Avuykt</li>
+                            <li>3 Saatvik</li>
+                            <li>4 Charvik</li>
+                            <li>5 Virat</li>
+                            <li>6 Shivansh</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Extended Members List Area (7 to 18) -->
+                <div class="extended-list">
+                    <ul class="member-list">
+                        <li>7 Jai</li>
+                        <li>8 Siddhant</li>
+                        <li>9 Spandhan</li>
+                        <li>10 Aahana</li>
+                        <li>11 Aartick</li>
+                        <li>12 Kartikay</li>
+                        <li>13 Pratyush</li>
+                        <li>14 Chavi</li>
+                        <li>15 Sirat</li>
+                        <li>16 Divya</li>
+                        <li>17 Miyer</li>
+                        <li>18 Kulmeet</li>
+                    </ul>
+                </div>
+
+                <!-- Action Link Footer -->
+                <div>
+                    <a href="#" class="become-member-link">Become a member</a>
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
